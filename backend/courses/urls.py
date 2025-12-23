@@ -19,10 +19,5 @@ router.register(r'certificates', views.CertificateViewSet)
 router.register(r'comments', views.CommentViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('auth/login/', views.login_view, name='login'),
-    path('auth/register/', views.register_view, name='register'),
-    path('enroll/', views.enroll_view, name='enroll'),
-    path('payment/', views.payment_view, name='payment'),
-    path('profile/', views.profile_view, name='profile'),
+    path('api/v1/', include(router.urls)),
 ]
